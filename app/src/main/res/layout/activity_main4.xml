@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity4">
+
+    <TextView
+        android:id="@+id/tvNuevaPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Recuperar contraseña"
+        android:textColor="#283593"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Para recuperar tu contraseña , deberas ingresar tu nombre de usuario , tu pregunta y respuesta secreta."
+        app:layout_constraintEnd_toEndOf="@+id/tvNuevaPass"
+        app:layout_constraintStart_toStartOf="@+id/tvNuevaPass"
+        app:layout_constraintTop_toBottomOf="@+id/tvNuevaPass" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNewPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvDescripcion"
+        app:layout_constraintStart_toStartOf="@+id/tvDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescripcion">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:hint="Usuario" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spnPregunta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/tilNewPass"
+        app:layout_constraintStart_toStartOf="@+id/tilNewPass"
+        app:layout_constraintTop_toBottomOf="@+id/tilNewPass" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRespuesta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/spnPregunta"
+        app:layout_constraintStart_toStartOf="@+id/spnPregunta"
+        app:layout_constraintTop_toBottomOf="@+id/spnPregunta">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:hint="Respuesta secreta" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnRecuperar"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Recuperar"
+        app:layout_constraintEnd_toEndOf="@+id/tilRespuesta"
+        app:layout_constraintTop_toBottomOf="@+id/tilRespuesta" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="123dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Volver"
+        app:layout_constraintStart_toStartOf="@+id/tilRespuesta"
+        app:layout_constraintTop_toBottomOf="@+id/tilRespuesta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
